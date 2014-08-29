@@ -121,7 +121,7 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
-        'Goxob\Core\CoreServiceProvider'
+        'Jason\Chat\ChatServiceProvider'
 	),
 
 	/*
@@ -188,8 +188,6 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
-        'BaseController'  => 'Goxob\Core\Controller\BaseController',
-        'Model'             => 'Goxob\Core\Model\Model',
 	),
 
 );
