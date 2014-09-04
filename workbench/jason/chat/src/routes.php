@@ -1,5 +1,5 @@
 <?php
 
-Route::get('/', 'HomeController@index');
+Route::get('/', '\\Jason\\Chat\\Controllers\\ChatController@getIndex');
 
-Route::post('/booking', 'HomeController@booking');
+Route::controller('chat', '\\Jason\\Chat\\Controllers\\ChatController');

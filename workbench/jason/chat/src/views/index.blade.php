@@ -9,7 +9,7 @@
         <div class="form-white">
             @include('chat::layouts.partials.message')
 
-            {{ Form::open(array('url' => 'customer/login', 'id' => 'login-form')) }}
+            {{ Form::open(array('url' => 'chat/booking', 'id' => 'login-form')) }}
 
             <div class="form-group">
                 {{ Form::label('name', 'Name') }}

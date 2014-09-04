@@ -16,4 +16,6 @@ return array(
 	'debug' => true,
 
     'url' => 'http://socketchat.local/',
+
+    'timezone' => 'Asia/Ho_Chi_Minh',
 );
