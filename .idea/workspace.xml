@@ -2,215 +2,52 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00731dba-c839-4893-9797-bdb0ecdbaf04" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/545542_292611187499173_1318607934_n.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/BebasNeue-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/FontAwesome.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/MaidSavvy_Logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/MaidSavvy_Logo2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/app-store.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/breakfast.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/city.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/client-3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/coupon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/general-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/general-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/general-3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/general-4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/bootstrap/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/bootstrap/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regulard41d.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/icon-circle.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/living-room.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/people-2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/people-3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/portfolio-3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/database/production.sqlite" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/savvy_cleaner.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/socketchat.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/thumbnail-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/thumbnail-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/thumbnail-3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/thumbnail-4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/trust.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitattributes" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/storage/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/storage/cache/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/storage/logs/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/storage/meta/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/storage/sessions/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/storage/views/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workbench/goxob/core/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/commands/.gitkeep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/packages/.gitkeep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/.gitkeep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/database/migrations/.gitkeep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/database/seeds/.gitkeep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/.gitkeep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workbench/goxob/core/public/.gitkeep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workbench/goxob/core/src/config/.gitkeep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workbench/goxob/core/src/controllers/.gitkeep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workbench/goxob/core/src/lang/.gitkeep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workbench/goxob/core/src/migrations/.gitkeep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workbench/goxob/core/src/views/.gitkeep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workbench/goxob/core/tests/.gitkeep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.htaccess" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/.htaccess" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workbench/goxob/core/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workbench/goxob/core/src/Goxob/Core/Controller/AdminBaseController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workbench/goxob/core/src/Goxob/Core/Controller/AdminController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workbench/goxob/core/src/Goxob/Core/Block/BaseBlock.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workbench/goxob/core/src/Goxob/Core/Controller/BaseController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CONTRIBUTING.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workbench/goxob/core/src/Goxob/Core/CoreServiceProvider.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/Customer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/CustomerController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workbench/goxob/core/src/Goxob/Core/Helper/Data.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workbench/goxob/core/src/Goxob/Core/Helper/Email.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/tests/ExampleTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workbench/goxob/core/src/Goxob/Core/Helper/File.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workbench/goxob/core/src/Goxob/Core/Html/FormRow.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workbench/goxob/core/src/Goxob/Core/Block/Grid.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workbench/goxob/core/src/Goxob/Core/Helper.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workbench/goxob/core/src/Goxob/Core/Helper/Html.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/Job.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/JobController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workbench/goxob/core/src/Goxob/Core/Model/Model.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workbench/goxob/core/src/Goxob/Core/Model/ModelList.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/PublicController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/RemindersController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workbench/goxob/core/src/Goxob/Core/Block/Grid/RendererInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/tests/TestCase.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workbench/goxob/core/src/Goxob/Core/Html/Toolbar.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workbench/goxob/core/src/Goxob/Core/Model/UploadableInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workbench/goxob/core/src/Goxob/Core/Model/UploadableModel.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/User.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/animate.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/app.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/local/app.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/bootstrap-validator/js/language/ar_MA.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/start/artisan.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/artisan" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/auth.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/autoload.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/basic_ie.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/bootstrap-validator/js/language/be_NL.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/bootstrap-validator/js/language/bg_BG.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/blank.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/public/booking.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/bootstrap/css/bootstrap-datetimepicker.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/bootstrap/js/bootstrap-datetimepicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/bootstrap/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/bootstrap/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/bootstrap-validator/css/bootstrapValidator.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/bootstrap-validator/js/bootstrapValidator.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/bootstrap-validator/css/bootstrapValidator.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/bootstrap-validator/js/bootstrapValidator.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/cache.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/testing/cache.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/color-styles.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/compile.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workbench/goxob/core/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/public/contact-us.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/bootstrap-validator/js/language/cs_CZ.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/custom.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/custom.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/customer.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/bootstrap-validator/js/language/da_DK.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/database.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/local/database.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/bootstrap-validator/js/language/de_DE.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/bootstrap-validator/js/language/en_US.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/bootstrap-validator/js/language/es_CL.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/bootstrap-validator/js/language/es_ES.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/public/faqs.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/filters.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/font-awesome.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/partials/footer.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/bootstrap-validator/js/language/fr_FR.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/start/global.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/bootstrap/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/bootstrap-validator/js/language/gr_EL.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/partials/head.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/partials/header.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/bootstrap-validator/js/language/hu_HU.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/public/index.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/bootstrap-validator/js/language/it_IT.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/bootstrap/js/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/jquery.simplemodal.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/start/local.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/public/locations.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/customer/login.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/mCustomScrollbar.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/mCustomScrollbar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/magicento.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/mail.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/partials/message.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/bootstrap/js/moment.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/bootstrap-validator/js/language/nl_NL.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/partials/pagination-slider-3.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lang/en/pagination.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/paths.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpunit.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workbench/goxob/core/phpunit.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/bootstrap-validator/js/language/pl_PL.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/public/pricing.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/public/privacy-policy.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/bootstrap-validator/js/language/pt_BR.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/public.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/queue.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/customer/remind.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/emails/auth/reminder.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lang/en/reminders.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/remote.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/customer/reset.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/robots.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/routes.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/scrolltopcontrol.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/services.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/session.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/testing/session.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/start.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/styles.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/public/terms.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/bootstrap-validator/js/language/tr_TR.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/ui-elements.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lang/en/validation.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/bootstrap-validator/js/language/vi_VN.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/view.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/workbench.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/bootstrap-validator/js/language/zh_CN.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/bootstrap-validator/js/language/zh_TW.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workbench/jason/chat/src/Jason/Chat/BasicPubSub.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workbench/jason/chat/src/Jason/Chat/Pusher.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workbench/jason/chat/src/views/thankyou.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workbench/jason/chat/src/controllers/ChatController.php" afterPath="$PROJECT_DIR$/workbench/jason/chat/src/controllers/ChatController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workbench/jason/chat/src/models/User.php" afterPath="$PROJECT_DIR$/workbench/jason/chat/src/models/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workbench/jason/chat/bin/chat-server.php" afterPath="$PROJECT_DIR$/workbench/jason/chat/bin/chat-server.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workbench/jason/chat/src/views/chat.blade.php" afterPath="$PROJECT_DIR$/workbench/jason/chat/src/views/chat.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workbench/jason/chat/src/views/index.blade.php" afterPath="$PROJECT_DIR$/workbench/jason/chat/src/views/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workbench/jason/chat/src/routes.php" afterPath="$PROJECT_DIR$/workbench/jason/chat/src/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/packages/jason/chat/css/styles.css" afterPath="$PROJECT_DIR$/public/packages/jason/chat/css/styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workbench/jason/chat/public/css/styles.css" afterPath="$PROJECT_DIR$/workbench/jason/chat/public/css/styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="source.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="00731dba-c839-4893-9797-bdb0ecdbaf04" time="1409210668121" ignored="false" />
+    <file path="/Dummy.txt" changelist="00731dba-c839-4893-9797-bdb0ecdbaf04" time="1410332746861" ignored="false" />
+    <file path="/routes.php" changelist="00731dba-c839-4893-9797-bdb0ecdbaf04" time="1410336074179" ignored="false" />
+    <file path="/a.dummy" changelist="00731dba-c839-4893-9797-bdb0ecdbaf04" time="1409369043750" ignored="false" />
+    <file path="/HomeController.php" changelist="00731dba-c839-4893-9797-bdb0ecdbaf04" time="1409374608205" ignored="false" />
+    <file path="/head.blade.php" changelist="00731dba-c839-4893-9797-bdb0ecdbaf04" time="1409301867018" ignored="false" />
+    <file path="/header.blade.php" changelist="00731dba-c839-4893-9797-bdb0ecdbaf04" time="1409299955273" ignored="false" />
+    <file path="/index.blade.php" changelist="00731dba-c839-4893-9797-bdb0ecdbaf04" time="1410337352781" ignored="false" />
+    <file path="/public.blade.php" changelist="00731dba-c839-4893-9797-bdb0ecdbaf04" time="1409301186036" ignored="false" />
+    <file path="/styles.css" changelist="00731dba-c839-4893-9797-bdb0ecdbaf04" time="1409831334907" ignored="false" />
+    <file path="/User.php" changelist="00731dba-c839-4893-9797-bdb0ecdbaf04" time="1409639743433" ignored="false" />
+    <file path="$PROJECT_DIR$/../../maid/source/workbench/goxob/core/src/Goxob/Core/Model/Model.php" changelist="00731dba-c839-4893-9797-bdb0ecdbaf04" time="1409367162416" ignored="false" />
+    <file path="/reminder.blade.php" changelist="00731dba-c839-4893-9797-bdb0ecdbaf04" time="1409815994537" ignored="false" />
+    <file path="$PROJECT_DIR$/../../maid/source/workbench/goxob/user/src/Goxob/User/UserServiceProvider.php" changelist="00731dba-c839-4893-9797-bdb0ecdbaf04" time="1409640781674" ignored="false" />
+    <file path="$PROJECT_DIR$/../../maid/source/workbench/goxob/user/composer.json" changelist="00731dba-c839-4893-9797-bdb0ecdbaf04" time="1409564877682" ignored="false" />
+    <file path="$PROJECT_DIR$/../../maid/source/workbench/goxob/user/src/views/login.blade.php" changelist="00731dba-c839-4893-9797-bdb0ecdbaf04" time="1409565173888" ignored="false" />
+    <file path="/login.blade.php" changelist="00731dba-c839-4893-9797-bdb0ecdbaf04" time="1409564780395" ignored="false" />
+    <file path="$PROJECT_DIR$/../../maid/source/app/views/admin/layouts/empty.blade.php" changelist="00731dba-c839-4893-9797-bdb0ecdbaf04" time="1409639810100" ignored="false" />
+    <file path="$PROJECT_DIR$/../../maid/source/workbench/goxob/user/src/Goxob/User/Helper/Auth.php" changelist="00731dba-c839-4893-9797-bdb0ecdbaf04" time="1409639757886" ignored="false" />
+    <file path="/Auth.php" changelist="00731dba-c839-4893-9797-bdb0ecdbaf04" time="1409639568504" ignored="false" />
+    <file path="$PROJECT_DIR$/../../maid/source/workbench/goxob/user/src/models/User.php" changelist="00731dba-c839-4893-9797-bdb0ecdbaf04" time="1409639745891" ignored="false" />
+    <file path="$PROJECT_DIR$/../../maid/source/app/routes.php" changelist="00731dba-c839-4893-9797-bdb0ecdbaf04" time="1409640023246" ignored="false" />
+    <file path="$PROJECT_DIR$/../../maid/source/app/views/admin/layouts/partials/menu.blade.php" changelist="00731dba-c839-4893-9797-bdb0ecdbaf04" time="1409640622874" ignored="false" />
+    <file path="$PROJECT_DIR$/../../maid/source/app/filters.php" changelist="00731dba-c839-4893-9797-bdb0ecdbaf04" time="1409640712792" ignored="false" />
+    <file path="$PROJECT_DIR$/../../maid/source/workbench/goxob/user/src/filters.php" changelist="00731dba-c839-4893-9797-bdb0ecdbaf04" time="1409640731899" ignored="false" />
+    <file path="/ChatController.php" changelist="00731dba-c839-4893-9797-bdb0ecdbaf04" time="1410336655343" ignored="false" />
+    <file path="/video.blade.php" changelist="00731dba-c839-4893-9797-bdb0ecdbaf04" time="1409742318422" ignored="false" />
+    <file path="/chat-server.php" changelist="00731dba-c839-4893-9797-bdb0ecdbaf04" time="1409978570871" ignored="false" />
+    <file path="/chat.blade.php" changelist="00731dba-c839-4893-9797-bdb0ecdbaf04" time="1410161372959" ignored="false" />
+    <file path="$PROJECT_DIR$/public/packages/jason/chat/css/bootstrap.min.css" changelist="00731dba-c839-4893-9797-bdb0ecdbaf04" time="1409831350971" ignored="false" />
+    <file path="/Pusher.php" changelist="00731dba-c839-4893-9797-bdb0ecdbaf04" time="1409975889828" ignored="false" />
+    <file path="/BasicPubSub.php" changelist="00731dba-c839-4893-9797-bdb0ecdbaf04" time="1409978217193" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,6 +65,100 @@
   <component name="FavoritesManager">
     <favorites_list name="source" />
   </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="ChatController.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/workbench/jason/chat/src/controllers/ChatController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="70" selection-start="1006" selection-end="1006" vertical-scroll-proportion="-0.5622568">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/workbench/jason/chat/src/views/index.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="74" column="35" selection-start="2656" selection-end="2656" vertical-scroll-proportion="-43.46154">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/workbench/jason/chat/src/routes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="10" selection-start="87" selection-end="90" vertical-scroll-proportion="-2.6153846">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Application.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Application.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="749" column="0" selection-start="16941" selection-end="16941" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/workbench/jason/chat/src/models/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="71" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chat-server.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/workbench/jason/chat/bin/chat-server.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="42" selection-start="833" selection-end="833" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BasicPubSub.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/workbench/jason/chat/src/Jason/Chat/BasicPubSub.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="55" selection-start="1028" selection-end="1028" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Chat.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/workbench/jason/chat/src/Jason/Chat/Chat.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="55" selection-start="591" selection-end="638" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chat.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/workbench/jason/chat/src/views/chat.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="33" selection-start="340" selection-end="349" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/workbench/jason/chat/public/css/styles.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="90" column="1" selection-start="1696" selection-end="1696" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="FindManager">
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
@@ -241,8 +172,35 @@
       <MyDateState />
     </option>
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/app/config/local/database.php" />
+        <option value="$PROJECT_DIR$/workbench/jason/chat/src/controllers/HomeController.php" />
+        <option value="$PROJECT_DIR$/app/config/local/app.php" />
+        <option value="$PROJECT_DIR$/workbench/jason/chat/src/views/video.blade.php" />
+        <option value="$PROJECT_DIR$/workbench/jason/chat/src/views/reminder.blade.php" />
+        <option value="$PROJECT_DIR$/workbench/jason/chat/composer.json" />
+        <option value="$PROJECT_DIR$/workbench/jason/chat/src/Jason/Chat/Chat.php" />
+        <option value="$PROJECT_DIR$/workbench/jason/chat/src/Jason/Chat/Pusher.php" />
+        <option value="$PROJECT_DIR$/workbench/jason/chat/src/Jason/Chat/BasicPubSub.php" />
+        <option value="$PROJECT_DIR$/workbench/jason/chat/bin/chat-server.php" />
+        <option value="$PROJECT_DIR$/workbench/jason/chat/public/css/styles.css" />
+        <option value="$PROJECT_DIR$/workbench/jason/chat/src/views/chat.blade.php" />
+        <option value="$PROJECT_DIR$/workbench/jason/chat/src/models/User.php" />
+        <option value="$PROJECT_DIR$/workbench/jason/chat/src/routes.php" />
+        <option value="$PROJECT_DIR$/workbench/jason/chat/src/views/index.blade.php" />
+        <option value="$PROJECT_DIR$/workbench/jason/chat/src/controllers/ChatController.php" />
+      </list>
+    </option>
+  </component>
   <component name="PhpDebugGeneral" xdebug_debug_port="10003" />
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="PhpServers">
+    <option name="servers">
+      <server host="socketchat.local" name="socketchat.local" />
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP Interpreter" />
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
@@ -256,7 +214,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
@@ -275,6 +233,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -295,31 +254,33 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="154" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="154" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="154" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="154" />
+    <property name="recentsLimit" value="5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/Programs/xampp/php" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="154" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="828" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="829" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="828" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="154" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="153" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FullScreen" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="restartRequiresConfirmation" value="true" />
     <property name="options.searchVisible" value="true" />
   </component>
   <component name="PublishConfig">
@@ -340,15 +301,48 @@
       </server>
     </servers>
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Working\Projects\freelancer\socketchat\source\workbench\jason\chat\src\views\layouts" />
+      <recent name="D:\Working\Projects\freelancer\socketchat\source\workbench\jason\chat\bin" />
+      <recent name="D:\Working\Projects\freelancer\socketchat\source\workbench\jason\chat\src\views" />
+      <recent name="D:\Working\Projects\freelancer\socketchat\source\workbench\jason\chat\public\videos" />
+      <recent name="D:\Working\Projects\freelancer\socketchat\source\app\models" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Working\Projects\freelancer\socketchat\source\workbench\jason\chat\src\views" />
+    </key>
+  </component>
+  <component name="RunManager" selected="PHP Web Application.socketchat.local">
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
       <method />
     </configuration>
     <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
-    <list size="0" />
+    <configuration default="false" name="socketchat.local" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="socketchat.local">
+      <RunnerSettings RunnerId="PhpWebAppDebugRunner" />
+      <ConfigurationWrapper RunnerId="PhpWebAppDebugRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="chat-server.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/workbench/jason/chat/bin/chat-server.php">
+      <RunnerSettings RunnerId="PhpRunner" />
+      <RunnerSettings RunnerId="PhpScriptDebugRunner" />
+      <ConfigurationWrapper RunnerId="PhpRunner" />
+      <ConfigurationWrapper RunnerId="PhpScriptDebugRunner" />
+      <method />
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="PHP Web Application.socketchat.local" />
+      <item index="1" class="java.lang.String" itemvalue="PHP Script.chat-server.php" />
+    </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
@@ -374,6 +368,19 @@
       <created>1409208772993</created>
       <updated>1409208772993</updated>
     </task>
+    <task id="LOCAL-00001" summary="init commit">
+      <created>1409210720488</created>
+      <updated>1409210720488</updated>
+    </task>
+    <task id="LOCAL-00002" summary="landing page">
+      <created>1409307001314</created>
+      <updated>1409307001314</updated>
+    </task>
+    <task id="LOCAL-00003" summary="chat setup">
+      <created>1409831997342</created>
+      <updated>1409831997342</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -383,18 +390,18 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.275" sideWeight="0.6712095" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27651516" sideWeight="0.6017094" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3967213" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32991454" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991454" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -442,7 +449,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="chat setup" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -457,9 +464,139 @@
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="init" />
+    <MESSAGE value="init commit" />
+    <MESSAGE value="landing page" />
+    <MESSAGE value="chat setup" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/workbench/jason/chat/src/Jason/Chat/Chat.php</url>
+          <line>24</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/workbench/jason/chat/src/Jason/Chat/Chat.php</url>
+          <line>30</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/workbench/jason/chat/src/controllers/ChatController.php</url>
+          <line>95</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="10" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/workbench/jason/chat/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="17" selection-start="350" selection-end="350" vertical-scroll-proportion="0.45525292" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workbench/jason/chat/src/views/layouts/public.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="41" selection-start="260" selection-end="260" vertical-scroll-proportion="0.39688715" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workbench/jason/chat/src/views/reminder.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="11.615385" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workbench/jason/chat/src/views/video.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="3" selection-start="394" selection-end="394" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workbench/jason/chat/src/views/thankyou.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workbench/jason/chat/src/Jason/Chat/Chat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="55" selection-start="591" selection-end="638" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workbench/jason/chat/bin/chat-server.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="42" selection-start="833" selection-end="833" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workbench/jason/chat/src/Jason/Chat/BasicPubSub.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="55" selection-start="1028" selection-end="1028" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workbench/jason/chat/src/views/chat.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="33" selection-start="340" selection-end="349" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Application.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="749" column="0" selection-start="16941" selection-end="16941" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workbench/jason/chat/src/models/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="71" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workbench/jason/chat/public/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="1" selection-start="1696" selection-end="1696" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workbench/jason/chat/src/views/layouts/partials/footer.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="18" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workbench/jason/chat/src/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="10" selection-start="87" selection-end="90" vertical-scroll-proportion="-2.6153846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workbench/jason/chat/src/views/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="35" selection-start="2656" selection-end="2656" vertical-scroll-proportion="-43.46154">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workbench/jason/chat/src/controllers/ChatController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="70" selection-start="1006" selection-end="1006" vertical-scroll-proportion="-0.5622568">
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
 

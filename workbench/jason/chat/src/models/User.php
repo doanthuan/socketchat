@@ -9,6 +9,8 @@ class User extends  Eloquent{
 
     protected $primaryKey = 'user_id';
 
+    protected $fillable = array( 'name', 'gender', 'email', 'channelId');
+
     protected $rules = array(
         'name'=>'required|min:2',
         'gender'=>'required',
