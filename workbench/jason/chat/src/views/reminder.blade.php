@@ -19,6 +19,7 @@
 <script>
     // set the date we're counting down to
     var target_date = new Date('{{$showTime}}').getTime();
+    var current_date = new Date('{{$currentTime}}').getTime();
 
     // variables for time units
     var days, hours, minutes, seconds;
@@ -30,7 +31,7 @@
     setInterval(function () {
 
         // find the amount of "seconds" between now and target
-        var current_date = new Date().getTime();
+
         var seconds_left = (target_date - current_date) / 1000;
 
         // do some time calculations

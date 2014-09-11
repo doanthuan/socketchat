@@ -8,7 +8,7 @@ class ChatController extends Controller {
 
 	public function getIndex()
 	{
-        Session::flush();
+        //Session::flush();
         //check if user is already registered
         if(Session::has('chat_user')){
             //display reminder
@@ -80,6 +80,7 @@ class ChatController extends Controller {
         $showTime = $this->getShowTime($queueNumber);
 
         $view['showTime'] = date('M d, Y, H:i:s', $showTime);
+        $view['currentTime'] = date('M d, Y, H:i:s');
 
         return View::make('chat::reminder', $view);
     }
@@ -98,6 +99,7 @@ class ChatController extends Controller {
 
         $data['username'] = $chatUser->name;
         $data['channelId'] = $chatUser->channelId;
+        $data['server'] = $_SERVER['SERVER_NAME'];
 
         return View::make('chat::chat', $data);
     }

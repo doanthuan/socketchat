@@ -13,7 +13,7 @@
 <script>
     var channelId = '{{$channelId}}';
     var username = '{{$username}}';
-    var conn = new ab.Session('ws://localhost:9888',
+    var conn = new ab.Session('ws://{{$server}}:9888',
         function() {
             conn.subscribe(channelId, function(topic, data) {
                 var messages = $('#chat-window').html();

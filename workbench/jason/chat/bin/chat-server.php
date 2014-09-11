@@ -26,6 +26,6 @@ $pusher = new \Jason\Chat\Pusher;
 //
 //$loop->run();
 
-$server = new \Ratchet\App('localhost', 9888, '0.0.0.0');
+$server = new \Ratchet\App('socketchat.local', 9888, '0.0.0.0');
 $server->route('', new \Jason\Chat\BasicPubSub, array('*'));
 $server->run();
