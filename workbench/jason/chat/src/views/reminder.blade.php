@@ -15,7 +15,10 @@
         </div> <!-- /#Main Div -->
     </div> <!-- /.Columns Div -->
 </div> <!-- /.Row Div -->
-
+{{ Form::open(array('url' => 'chat/video', 'id' => 'reminder-form')) }}
+{{ Form::close()}}
+@section('footer')
+@parent
 <script>
     // set the date we're counting down to
     var target_date = new Date('{{$showTime}}').getTime();
@@ -27,12 +30,13 @@
     // get tag element
     var countdown = document.getElementById('countdown');
 
+    var seconds_left = (target_date - current_date) / 1000;
+
     // update the tag with id "countdown" every 1 second
-    setInterval(function () {
+    var refreshIntervalId = setInterval(function () {
 
         // find the amount of "seconds" between now and target
-
-        var seconds_left = (target_date - current_date) / 1000;
+        seconds_left--;
 
         // do some time calculations
         days = parseInt(seconds_left / 86400);
@@ -50,10 +54,26 @@
 
         if(hours <= 0 && minutes <= 0 && seconds <= 0){
             //redirect to video show
-            window.location = '{{url('chat/video')}}';
+            //window.location = '{{url('chat/video')}}';
+            clearInterval(refreshIntervalId);
+            countdown.innerHTML = '<h1>Video is starting...</h1>';
         }
-
     }, 1000);
 </script>
+<script src="http://autobahn.s3.amazonaws.com/js/autobahn.min.js"></script>
+<script>
+    var conn = new ab.Session('ws://{{$server}}:19888',
+        function() {
+            conn.subscribe('video', function(topic, data) {
+                $('#reminder-form').submit();
+            });
+        },
+        function() {
+            console.warn('WebSocket connection closed');
+        },
+        {'skipSubprotocolCheck': true}
+    );
+</script>
 
+@stop
 @stop

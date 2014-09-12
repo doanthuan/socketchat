@@ -8,7 +8,7 @@ class ChatController extends Controller {
 
 	public function getIndex()
 	{
-        //Session::flush();
+        Session::flush();
         //check if user is already registered
         if(Session::has('chat_user')){
             //display reminder
@@ -67,11 +67,21 @@ class ChatController extends Controller {
         echo 'false';
     }
 
+    public function setStep()
+    {
+        if(Input::has('step')){
+            Session::put('step', Input::get('step'));
+        }
+    }
+
     public function getReminder()
     {
         //check if slot is valid and display proper reminder
         //count gender person and set reminder
         $user = Session::get('chat_user');
+        if(!isset($user)){
+            return Redirect::to('chat');
+        }
 
         //count user with same gender
         $numberOfSlots = \Jason\Chat\Models\User::count();
@@ -82,32 +92,43 @@ class ChatController extends Controller {
         $view['showTime'] = date('M d, Y, H:i:s', $showTime);
         $view['currentTime'] = date('M d, Y, H:i:s');
 
+        $view['server'] = $_SERVER['SERVER_NAME'];
+
         return View::make('chat::reminder', $view);
     }
 
-    public function getVideo()
+    public function postVideo()
     {
         $user = Session::get('chat_user');
+        if(!isset($user)){
+            return Redirect::to('chat');
+        }
 
         return View::make('chat::video');
     }
 
-    public function getChat()
+    public function postChat()
     {
         $user = Session::get('chat_user');
+        if(!isset($user)){
+            return Redirect::to('chat');
+        }
+
         $chatUser = \Jason\Chat\Models\User::find($user->user_id);
 
         $data['username'] = $chatUser->name;
         $data['channelId'] = $chatUser->channelId;
         $data['server'] = $_SERVER['SERVER_NAME'];
 
+        Session::flush();
         return View::make('chat::chat', $data);
     }
 
     private function getShowTime($queueNumber)
     {
+        $period = 1;
         $curMin = date('i');
-        $addMin = intval($curMin/30) * 30 + 30 * ($queueNumber + 1);
+        $addMin = intval($curMin/$period) * $period + $period * ($queueNumber + 1);
         $time = strtotime(date('Y-m-d H:00:00'));
         $showTime = strtotime('+'.$addMin.' minutes', $time);
         return $showTime;

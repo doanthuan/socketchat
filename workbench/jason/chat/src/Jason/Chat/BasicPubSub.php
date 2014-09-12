@@ -17,6 +17,9 @@ use Ratchet\ConnectionInterface as Conn;
  * to that topic will receive the message/event from the publisher
  */
 class BasicPubSub implements \Ratchet\Wamp\WampServerInterface {
+
+    public $subscribedTopics = array();
+
     public function onPublish(Conn $conn, $topic, $event, array $exclude, array $eligible) {
         $topic->broadcast($event);
     }
@@ -26,7 +29,9 @@ class BasicPubSub implements \Ratchet\Wamp\WampServerInterface {
     }
 
     // No need to anything, since WampServer adds and removes subscribers to Topics automatically
-    public function onSubscribe(Conn $conn, $topic) {}
+    public function onSubscribe(Conn $conn, $topic) {
+        $this->subscribedTopics[$topic->getId()] = $topic;
+    }
     public function onUnSubscribe(Conn $conn, $topic) {}
 
     public function onOpen(Conn $conn) {
