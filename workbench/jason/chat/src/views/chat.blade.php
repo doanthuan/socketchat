@@ -7,15 +7,31 @@
 
 <input type="text" id="input-chat" name="input" class="form-control" placeholder="Type here...">
 
+{{ Form::open(array('url' => 'chat/finish', 'id' => 'finish-form')) }}
+{{ Form::close()}}
+
 @section('footer')
 @parent
 <script src="http://autobahn.s3.amazonaws.com/js/autobahn.min.js"></script>
 <script>
     var channelId = '{{$channelId}}';
+
+    if(channelId == ''){
+        alert('Could not find a partner for you.');
+        window.location = '{{url('chat')}}';
+    }
+
     var username = '{{$username}}';
     var conn = new ab.Session('ws://{{$server}}:19888',
         function() {
             conn.subscribe(channelId, function(topic, data) {
+                console.log(data);
+                if(data == 'end-chat'){
+                    alert('Terminate chat application');
+                    $('#finish-form').submit();
+                    return false;
+                }
+
                 var messages = $('#chat-window').html();
                 var dataArr = data[0].split(":");
                 var className = 'comment';

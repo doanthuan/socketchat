@@ -30,16 +30,35 @@ $loop->addPeriodicTimer(2, function () use (&$handler, &$showTime){
 //    $memory = memory_get_usage() / 1024;
 //    $formatted = number_format($memory, 3).'K';
 //    echo "Current memory usage: {$formatted}\n";
-    //echo "time:".time()."\n";
-    //echo "showTime:".$showTime."\n";
+    //echo "time:".date('Y-m-d H:i:s')."\n";
+    //echo "showTime:".date('Y-m-d H:i:s', $showTime)."\n";
     if(time() > $showTime){
         echo "Starting video show...\n";
+
         $showTime = getShowTime();
-        $subscribedTopics = $handler->subscribedTopics;
-        if(isset($subscribedTopics['video'])){
-            $videoChannel = $subscribedTopics['video'];
-            $videoChannel->broadcast('start');
+
+        $videoChannel =& $handler->videoChannel;
+        $channel = array_shift ( $videoChannel );
+        if($channel)
+        {
+            $channel->broadcast('start');
         }
+    }
+});
+
+$endTime = getEndTime($showTime);
+$loop->addPeriodicTimer(10, function () use (&$handler, &$endTime){
+    //echo "end time:".date('Y-m-d H:i:s', $endTime)."\n";
+    if(time() > $endTime){
+        echo "Terminate chat application...\n";
+        $subscribedTopics = $handler->subscribedTopics;
+        foreach($subscribedTopics as $channel){
+            $channel->broadcast('end-chat');
+        }
+        $handler->subscribedTopics = array();
+
+        $showTime = getShowTime();
+        $endTime = getEndTime($showTime);
     }
 });
 
@@ -47,13 +66,21 @@ $loop->run();
 
 function getShowTime()
 {
-    $period = 1;
+    $period = 2;
     $curMin = date('i');
     $addMin = intval($curMin/$period) * $period + $period;
     $time = strtotime(date('Y-m-d H:00:00'));
     $showTime = strtotime('+'.$addMin.' minutes', $time);
     return $showTime;
 }
+
+function getEndTime($showTime)
+{
+    $addMin = 1;
+    $endTime = strtotime('+'.$addMin.' minutes', $showTime);
+    return $endTime;
+}
+
 //$server = new \Ratchet\App('socketchat.local', 19888, '0.0.0.0');
 //$server->route('', new \Jason\Chat\BasicPubSub, array('*'));
 //$server->run();

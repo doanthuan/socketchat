@@ -21,58 +21,84 @@
 @parent
 <script>
     // set the date we're counting down to
-    var target_date = new Date('{{$showTime}}').getTime();
-    var current_date = new Date('{{$currentTime}}').getTime();
+    function startTimer()
+    {
+        var target_date = new Date('{{$showTime}}').getTime();
+        var current_date = new Date('{{$currentTime}}').getTime();
+        //var connect_date = new Date('{{$connectTime}}').getTime();
 
-    // variables for time units
-    var days, hours, minutes, seconds;
+        // variables for time units
+        var days, hours, minutes, seconds;
 
-    // get tag element
-    var countdown = document.getElementById('countdown');
+        // get tag element
+        var countdown = document.getElementById('countdown');
 
-    var seconds_left = (target_date - current_date) / 1000;
+        var seconds_left = (target_date - current_date) / 1000;
 
-    // update the tag with id "countdown" every 1 second
-    var refreshIntervalId = setInterval(function () {
+        // update the tag with id "countdown" every 1 second
+        var refreshIntervalId = setInterval(function () {
 
-        // find the amount of "seconds" between now and target
-        seconds_left--;
+            // find the amount of "seconds" between now and target
+            seconds_left--;
 
-        // do some time calculations
-        days = parseInt(seconds_left / 86400);
-        seconds_left = seconds_left % 86400;
+            // do some time calculations
+            days = parseInt(seconds_left / 86400);
+            seconds_left = seconds_left % 86400;
 
-        hours = parseInt(seconds_left / 3600);
-        seconds_left = seconds_left % 3600;
+            hours = parseInt(seconds_left / 3600);
+            seconds_left = seconds_left % 3600;
 
-        minutes = parseInt(seconds_left / 60);
-        seconds = parseInt(seconds_left % 60);
+            minutes = parseInt(seconds_left / 60);
+            seconds = parseInt(seconds_left % 60);
 
-        // format countdown string + set tag value
-        countdown.innerHTML = '<span class="hours">' + hours + ' <b>Hours</b></span> <span class="minutes">'
-            + minutes + ' <b>Minutes</b></span> <span class="seconds">' + seconds + ' <b>Seconds</b></span>';
+            // format countdown string + set tag value
+            countdown.innerHTML = '<span class="hours">' + hours + ' <b>Hours</b></span> <span class="minutes">'
+                + minutes + ' <b>Minutes</b></span> <span class="seconds">' + seconds + ' <b>Seconds</b></span>';
 
-        if(hours <= 0 && minutes <= 0 && seconds <= 0){
-            //redirect to video show
-            //window.location = '{{url('chat/video')}}';
-            clearInterval(refreshIntervalId);
-            countdown.innerHTML = '<h1>Video is starting...</h1>';
-        }
-    }, 1000);
+            if(hours <= 0 && minutes <= 0 && seconds <= 0){
+                //redirect to video show
+                //window.location = '{{url('chat/video')}}';
+                clearInterval(refreshIntervalId);
+                countdown.innerHTML = '<h1>Video is starting...</h1>';
+            }
+
+//            if(connected == false && connect_seconds_left && seconds_left == connect_seconds_left){
+//                alert('connect chat');
+//                connectChat();
+//            }
+        }, 1000);
+    }
+
 </script>
 <script src="http://autobahn.s3.amazonaws.com/js/autobahn.min.js"></script>
 <script>
-    var conn = new ab.Session('ws://{{$server}}:19888',
-        function() {
-            conn.subscribe('video', function(topic, data) {
-                $('#reminder-form').submit();
-            });
-        },
-        function() {
-            console.warn('WebSocket connection closed');
-        },
-        {'skipSubprotocolCheck': true}
-    );
+    var connected = false;
+    var queueNumber = {{$queue_number}};
+    var channelId = 'video_{{$queue_number}}';
+
+    connectChat();
+    function connectChat()
+    {
+        var conn = new ab.Session('ws://{{$server}}:19888',
+            function() {
+                conn.subscribe(channelId, function(topic, data) {
+                    $('#reminder-form').submit();
+                });
+
+                console.log("Connection established!");
+                connected = true;
+                startTimer();
+            },
+            function() {
+                console.warn('WebSocket connection closed');
+                if(!connected){
+                    alert('Can not connect to socket server');
+                }
+            },
+            {'skipSubprotocolCheck': true}
+        );
+    }
+
 </script>
 
 @stop

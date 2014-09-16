@@ -19,6 +19,7 @@ use Ratchet\ConnectionInterface as Conn;
 class BasicPubSub implements \Ratchet\Wamp\WampServerInterface {
 
     public $subscribedTopics = array();
+    public $videoChannel = array();
 
     public function onPublish(Conn $conn, $topic, $event, array $exclude, array $eligible) {
         $topic->broadcast($event);
@@ -30,13 +31,21 @@ class BasicPubSub implements \Ratchet\Wamp\WampServerInterface {
 
     // No need to anything, since WampServer adds and removes subscribers to Topics automatically
     public function onSubscribe(Conn $conn, $topic) {
-        $this->subscribedTopics[$topic->getId()] = $topic;
+        $topicId = $topic->getId();
+        if(strpos($topicId, 'video_') !== false){
+            $this->videoChannel[$topic->getId()] = $topic;
+        }
+        else{
+            $this->subscribedTopics[$topic->getId()] = $topic;
+        }
     }
     public function onUnSubscribe(Conn $conn, $topic) {}
 
     public function onOpen(Conn $conn) {
         echo "New connection! ({$conn->resourceId})\n";
     }
-    public function onClose(Conn $conn) {}
+    public function onClose(Conn $conn) {
+        echo "Connection exit! ({$conn->resourceId})\n";
+    }
     public function onError(Conn $conn, \Exception $e) {}
 }
