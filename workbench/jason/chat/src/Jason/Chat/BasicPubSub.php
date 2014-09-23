@@ -20,6 +20,7 @@ class BasicPubSub implements \Ratchet\Wamp\WampServerInterface {
 
     public $subscribedTopics = array();
     public $videoChannel = array();
+    public $subscribedClients = array();
 
     public function onPublish(Conn $conn, $topic, $event, array $exclude, array $eligible) {
         $topic->broadcast($event);
@@ -37,6 +38,7 @@ class BasicPubSub implements \Ratchet\Wamp\WampServerInterface {
         }
         else{
             $this->subscribedTopics[$topic->getId()] = $topic;
+            $this->subscribedClients[$topic->getId()][] = $conn;
         }
     }
     public function onUnSubscribe(Conn $conn, $topic) {}

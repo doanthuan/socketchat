@@ -10,12 +10,18 @@ class ChatController extends Controller {
 
 	public function getIndex()
 	{
-        Session::flush();
-        //check if user is already registered
-        if(Session::has('chat_user')){
-            //display reminder
-            return Redirect::to('chat/reminder');
+        //check if user is already registered and from other page
+        $user = Session::get('chat_user');
+        if(isset($user)){
+            if(Session::has('reminder')){
+                return Redirect::to('chat/reminder');
+            }
+            elseif(Session::has('entered')){
+                Session::flush();
+                \Jason\Chat\Models\User::destroy($user->user_id);
+            }
         }
+
 		return View::make('chat::index');
 	}
 
@@ -68,19 +74,6 @@ class ChatController extends Controller {
         return Redirect::to('chat/reminder');
     }
 
-    public function checkSlotAvailableForOppositeGender($gender)
-    {
-        $genderSlots = \Jason\Chat\Models\User::where('gender', $gender)->count();
-        $optGender = $gender == 'male'? 'female': 'male';
-        $optGenderSlots = \Jason\Chat\Models\User::where('gender', $optGender)->count();
-
-        if($genderSlots >= (self::MAX_NUM_SLOTS) && $optGenderSlots < self::MAX_NUM_SLOTS)//slot full for gender but not opposite gender
-        {
-            echo 'true';exit;
-        }
-        echo 'false';exit;
-    }
-
 
     public function getReminder()
     {
@@ -90,6 +83,12 @@ class ChatController extends Controller {
         if(!isset($user) || !isset($user->queue_number)){
             return Redirect::to('chat');
         }
+        if(Session::has('entered')){
+            Session::flush();
+            \Jason\Chat\Models\User::destroy($user->user_id);
+            return Redirect::to('chat');
+        }
+        Session::put('reminder', true);
 
         $showTime = $this->getShowTime($user->queue_number);
 
@@ -116,12 +115,14 @@ class ChatController extends Controller {
         if(!isset($user)){
             return Redirect::to('chat');
         }
+        Session::put('entered', true);
 
         //update user info into session before delete
         $user = \Jason\Chat\Models\User::find($user->user_id);
         Session::put('chat_user', $user);
-
-        $user->delete();
+        if($user){
+            $user->delete();
+        }
 
         return View::make('chat::video');
     }
@@ -134,7 +135,7 @@ class ChatController extends Controller {
         }
 
         //make sure delete all users for this queue
-        \Jason\Chat\Models\User::where('queue_number', $user->queue_number)->delete();
+        //\Jason\Chat\Models\User::where('queue_number', $user->queue_number)->delete();
 
         $data['username'] = $user->name;
         $data['channelId'] = $user->channelId;
@@ -142,25 +143,6 @@ class ChatController extends Controller {
 
         //Session::flush();
         return View::make('chat::chat', $data);
-    }
-
-    private function getShowTime($queueNumber)
-    {
-        $period = 2;
-        $curMin = date('i');
-        $currentQueue = Session::get('currentQueue');
-        $addMin = intval($curMin/$period) * $period + $period * ($queueNumber - $currentQueue + 1);
-        $time = strtotime(date('Y-m-d H:00:00'));
-        $showTime = strtotime('+'.$addMin.' minutes', $time);
-        return $showTime;
-    }
-
-    private function getQueueNumber($gender)
-    {
-        $currentQueue = Session::get('currentQueue');
-        $genderSlots = \Jason\Chat\Models\User::where('gender', $gender)->count();
-        $queueNumber = intval($genderSlots / self::MAX_NUM_SLOTS) + $currentQueue;
-        return $queueNumber;
     }
 
     public function postFinish()
@@ -185,5 +167,39 @@ class ChatController extends Controller {
         }
         return View::make('chat::thankyou');
     }
+
+    public function checkSlotAvailableForOppositeGender($gender)
+    {
+        $genderSlots = \Jason\Chat\Models\User::where('gender', $gender)->count();
+        $optGender = $gender == 'male'? 'female': 'male';
+        $optGenderSlots = \Jason\Chat\Models\User::where('gender', $optGender)->count();
+
+        if($genderSlots >= (self::MAX_NUM_SLOTS) && $optGenderSlots < self::MAX_NUM_SLOTS)//slot full for gender but not opposite gender
+        {
+            echo 'true';exit;
+        }
+        echo 'false';exit;
+    }
+
+    private function getShowTime($queueNumber)
+    {
+        $period = 2;
+        $curMin = date('i');
+        $currentQueue = Session::get('currentQueue');
+        $addMin = intval($curMin/$period) * $period + $period * ($queueNumber - $currentQueue + 1);
+        $time = strtotime(date('Y-m-d H:00:00'));
+        $showTime = strtotime('+'.$addMin.' minutes', $time);
+        return $showTime;
+    }
+
+    private function getQueueNumber($gender)
+    {
+        $currentQueue = Session::get('currentQueue');
+        $genderSlots = \Jason\Chat\Models\User::where('gender', $gender)->count();
+        $queueNumber = intval($genderSlots / self::MAX_NUM_SLOTS) + $currentQueue;
+        return $queueNumber;
+    }
+
+
 
 }
