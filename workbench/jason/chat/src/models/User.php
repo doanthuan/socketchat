@@ -2,12 +2,17 @@
 namespace Jason\Chat\Models;
 
 use Eloquent, Validator;
+use Illuminate\Database\Eloquent\SoftDeletingTrait;
 
 class User extends  Eloquent{
 
     protected $table = 'chat_users';
 
     protected $primaryKey = 'user_id';
+
+    use SoftDeletingTrait;
+
+    protected $dates = ['deleted_at'];
 
     protected $fillable = array( 'name', 'gender', 'email', 'channelId');
 

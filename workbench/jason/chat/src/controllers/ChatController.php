@@ -8,19 +8,21 @@ class ChatController extends Controller {
 
     const MAX_NUM_SLOTS = 1;
 
+    public function __construct()
+    {
+//        if (Session::has('last_activity') && (time() - Session::get('last_activity') > 20)) {
+//            Session::flush();
+//        }
+//        Session::put('last_activity', time());
+    }
+
 	public function getIndex()
 	{
         //check if user is already registered and from other page
-        $user = Session::get('chat_user');
-        if(isset($user)){
-            if(Session::has('reminder')){
-                return Redirect::to('chat/reminder');
-            }
-            elseif(Session::has('entered')){
-                Session::flush();
-                \Jason\Chat\Models\User::destroy($user->user_id);
-            }
+        if(Session::has('reminder')){
+            return Redirect::to('chat/reminder');
         }
+        Session::flush();
 
 		return View::make('chat::index');
 	}
@@ -37,38 +39,11 @@ class ChatController extends Controller {
         {
             return Redirect::back()->withErrors($user->getErrors())->withInput();
         }
-        $currentQueue = \Jason\Chat\Models\User::pluck('queue_number');
-        if(!isset($currentQueue)){
-            $currentQueue = 1;
-        }
-        Session::put('currentQueue', $currentQueue);
 
-        //check if slots are full
-        $genderSlots = \Jason\Chat\Models\User::where('gender', Input::get('gender'))->count();
-        if($genderSlots < self::MAX_NUM_SLOTS)//have slots
-        {
-            //find opposite sex user that does not have channel and make couple
-            $optGender = Input::get('gender') == 'male'? 'female': 'male';
-            $partner = \Jason\Chat\Models\User::whereNull('channelId')->where('gender', $optGender)->first();
-            if($partner)
-            {
-                //generate channel ID
-                $channelID = str_random(20);
-                $partner->channelId = $channelID;
-                $partner->save();
-
-                $user->channelId = $channelID;
-            }
-            $user->queue_number = $currentQueue;
-        }
-        else
-        {
-            $queueNumber = $this->getQueueNumber(Input::get('gender'));
-            $user->queue_number = $queueNumber;
-        }
+        $user->queue_number = $this->getQueueNumber(Input::get('gender'));
 
         $user->save();
-        //store user into session
+
         Session::put('chat_user', $user);
 
         return Redirect::to('chat/reminder');
@@ -77,12 +52,12 @@ class ChatController extends Controller {
 
     public function getReminder()
     {
-        //check if slot is valid and display proper reminder
-        //count gender person and set reminder
         $user = Session::get('chat_user');
-        if(!isset($user) || !isset($user->queue_number)){
+        if(!isset($user)){
             return Redirect::to('chat');
         }
+
+        //user come this page after video start, remove that user
         if(Session::has('entered')){
             Session::flush();
             \Jason\Chat\Models\User::destroy($user->user_id);
@@ -90,19 +65,11 @@ class ChatController extends Controller {
         }
         Session::put('reminder', true);
 
-        $showTime = $this->getShowTime($user->queue_number);
-
-        if($user->queue_number > 1){
-            $connectTime = $this->getShowTime($user->queue_number - 1);
-        }
-        else{
-            $connectTime = $showTime;
-        }
+        $showTime = \Jason\Chat\Helper::getShowTimeByQueue($user->queue_number);
 
         $view['showTime'] = date('M d, Y, H:i:s', $showTime);
         $view['currentTime'] = date('M d, Y, H:i:s');
         $view['queue_number'] = $user->queue_number;
-        $view['connectTime'] = $connectTime;
 
         $view['server'] = $_SERVER['SERVER_NAME'];
 
@@ -117,12 +84,9 @@ class ChatController extends Controller {
         }
         Session::put('entered', true);
 
-        //update user info into session before delete
-        $user = \Jason\Chat\Models\User::find($user->user_id);
+        //update user info (channel id) to session
+        $user = \Jason\Chat\Models\User::withTrashed()->find($user->user_id);
         Session::put('chat_user', $user);
-        if($user){
-            $user->delete();
-        }
 
         return View::make('chat::video');
     }
@@ -134,14 +98,10 @@ class ChatController extends Controller {
             return Redirect::to('chat');
         }
 
-        //make sure delete all users for this queue
-        //\Jason\Chat\Models\User::where('queue_number', $user->queue_number)->delete();
-
         $data['username'] = $user->name;
         $data['channelId'] = $user->channelId;
         $data['server'] = $_SERVER['SERVER_NAME'];
 
-        //Session::flush();
         return View::make('chat::chat', $data);
     }
 
@@ -181,20 +141,10 @@ class ChatController extends Controller {
         echo 'false';exit;
     }
 
-    private function getShowTime($queueNumber)
-    {
-        $period = 2;
-        $curMin = date('i');
-        $currentQueue = Session::get('currentQueue');
-        $addMin = intval($curMin/$period) * $period + $period * ($queueNumber - $currentQueue + 1);
-        $time = strtotime(date('Y-m-d H:00:00'));
-        $showTime = strtotime('+'.$addMin.' minutes', $time);
-        return $showTime;
-    }
-
     private function getQueueNumber($gender)
     {
-        $currentQueue = Session::get('currentQueue');
+        $currentQueue = \Jason\Chat\Helper::getCurrentQueue();
+
         $genderSlots = \Jason\Chat\Models\User::where('gender', $gender)->count();
         $queueNumber = intval($genderSlots / self::MAX_NUM_SLOTS) + $currentQueue;
         return $queueNumber;

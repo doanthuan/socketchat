@@ -18,9 +18,8 @@ use Ratchet\ConnectionInterface as Conn;
  */
 class BasicPubSub implements \Ratchet\Wamp\WampServerInterface {
 
-    public $subscribedTopics = array();
+    public $chatChannels = array();
     public $videoChannel = array();
-    public $subscribedClients = array();
 
     public function onPublish(Conn $conn, $topic, $event, array $exclude, array $eligible) {
         $topic->broadcast($event);
@@ -37,8 +36,7 @@ class BasicPubSub implements \Ratchet\Wamp\WampServerInterface {
             $this->videoChannel[$topic->getId()] = $topic;
         }
         else{
-            $this->subscribedTopics[$topic->getId()] = $topic;
-            $this->subscribedClients[$topic->getId()][] = $conn;
+            $this->chatChannels[$topic->getId()] = $topic;
         }
     }
     public function onUnSubscribe(Conn $conn, $topic) {}
@@ -48,6 +46,8 @@ class BasicPubSub implements \Ratchet\Wamp\WampServerInterface {
     }
     public function onClose(Conn $conn) {
         echo "Connection exit! ({$conn->resourceId})\n";
+
+        //\Session::put('exit_time', time());
     }
     public function onError(Conn $conn, \Exception $e) {}
 }

@@ -1,7 +1,6 @@
 <?php
 require dirname(__DIR__) . '/vendor/autoload.php';
 
-//$pusher = new \Jason\Chat\Pusher;
 $loop   = React\EventLoop\Factory::create();
 $handler =  new \Jason\Chat\BasicPubSub();
 
@@ -25,61 +24,59 @@ $webServer = new Ratchet\Server\IoServer(
     $webSock
 );
 
-$showTime = getShowTime();
+
+$showTime = \Jason\Chat\Helper::getShowTime();
 $loop->addPeriodicTimer(2, function () use (&$handler, &$showTime){
-//    $memory = memory_get_usage() / 1024;
-//    $formatted = number_format($memory, 3).'K';
-//    echo "Current memory usage: {$formatted}\n";
-    //echo "time:".date('Y-m-d H:i:s')."\n";
-    //echo "showTime:".date('Y-m-d H:i:s', $showTime)."\n";
     if(time() > $showTime){
         echo "Starting video show...\n";
 
-        $showTime = getShowTime();
+        $showTime = \Jason\Chat\Helper::getShowTime();
 
         $videoChannel =& $handler->videoChannel;
-        $channel = array_shift ( $videoChannel );
+        $channel = array_shift($videoChannel);
         if($channel)
         {
+            $queueNumber = substr($channel, strlen('video_'));
+            if(!is_numeric($queueNumber)){
+                throw new \Exception('Error when starting video show. Invalid current queue number');
+                exit;
+            }
+
+            //clear trash
+            \Jason\Chat\Models\User::onlyTrashed()->forceDelete();
+
+            //make couple for show
+            \Jason\Chat\Helper::makeCouple($queueNumber);
+
+            //delete current waiting queue
+            \Jason\Chat\Models\User::where('queue_number', $queueNumber)->delete();
+
+            //start video
             $channel->broadcast('start');
         }
     }
 });
 
-$endTime = getEndTime($showTime);
-$loop->addPeriodicTimer(10, function () use (&$handler, &$endTime){
-    //echo "end time:".date('Y-m-d H:i:s', $endTime)."\n";
+$endTime = \Jason\Chat\Helper::getEndTime($showTime);
+$loop->addPeriodicTimer(5, function () use (&$handler, &$endTime){
     if(time() > $endTime){
         echo "Terminate chat application...\n";
-        $subscribedTopics = $handler->subscribedTopics;
-        foreach($subscribedTopics as $channel){
+
+        $chatChannels = $handler->chatChannels;
+        foreach($chatChannels as $channel){
             $channel->broadcast('end-chat');
         }
-        $handler->subscribedTopics = array();
+        $handler->chatChannels = array();
 
-        $showTime = getShowTime();
-        $endTime = getEndTime($showTime);
+        $showTime = \Jason\Chat\Helper::getShowTime();
+        $endTime = \Jason\Chat\Helper::getEndTime($showTime);
     }
 });
 
 $loop->run();
 
-function getShowTime()
-{
-    $period = 2;
-    $curMin = date('i');
-    $addMin = intval($curMin/$period) * $period + $period;
-    $time = strtotime(date('Y-m-d H:00:00'));
-    $showTime = strtotime('+'.$addMin.' minutes', $time);
-    return $showTime;
-}
 
-function getEndTime($showTime)
-{
-    $addMin = 1;
-    $endTime = strtotime('+'.$addMin.' minutes', $showTime);
-    return $endTime;
-}
+
 
 //$server = new \Ratchet\App('socketchat.local', 19888, '0.0.0.0');
 //$server->route('', new \Jason\Chat\BasicPubSub, array('*'));

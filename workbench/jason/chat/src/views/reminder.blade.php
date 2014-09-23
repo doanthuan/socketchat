@@ -25,7 +25,6 @@
     {
         var target_date = new Date('{{$showTime}}').getTime();
         var current_date = new Date('{{$currentTime}}').getTime();
-        //var connect_date = new Date('{{$connectTime}}').getTime();
 
         // variables for time units
         var days, hours, minutes, seconds;
@@ -59,13 +58,9 @@
                 //redirect to video show
                 //window.location = '{{url('chat/video')}}';
                 clearInterval(refreshIntervalId);
-                countdown.innerHTML = '<h1>Video is starting...</h1>';
+                countdown.innerHTML = '<h1>Waiting video show from server...</h1>';
             }
 
-//            if(connected == false && connect_seconds_left && seconds_left == connect_seconds_left){
-//                alert('connect chat');
-//                connectChat();
-//            }
         }, 1000);
     }
 
@@ -82,6 +77,7 @@
         var conn = new ab.Session('ws://{{$server}}:19888',
             function() {
                 conn.subscribe(channelId, function(topic, data) {
+                    countdown.innerHTML = '<h1>Video is starting...</h1>';
                     $('#reminder-form').submit();
                 });
 
