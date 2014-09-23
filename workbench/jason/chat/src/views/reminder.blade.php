@@ -84,6 +84,17 @@
                 console.log("Connection established!");
                 connected = true;
                 startTimer();
+
+//                function add2(args) {
+//                    return args[0] + args[1];
+//                }
+//                conn.register('com.myapp.add2', add2);
+
+                conn.call(channelId, '{{$userId}}').then(
+                    function (res) {
+
+                    }
+                );
             },
             function() {
                 console.warn('WebSocket connection closed');

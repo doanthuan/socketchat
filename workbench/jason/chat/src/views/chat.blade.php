@@ -39,13 +39,24 @@
                     className += ' mine';
                 }
 
-                var msgRow =
-                '<div class="'+className+'">' +
-                    '<h2>'+dataArr[1]+'</h2>' +
-                    '<p>'+dataArr[0]+'</p>' +
-                '</div>';
+                if(dataArr[0]=='has left the room'){
+                    var msgRow =
+                        '<div class="'+className+'">' +
+                            '<p style="font-style: italic;">'+dataArr[1]+' '+dataArr[0]+'</p>' +
+                            '</div>';
+                }
+                else{
+                    var msgRow =
+                        '<div class="'+className+'">' +
+                            '<h2>'+dataArr[1]+'</h2>' +
+                            '<p>'+dataArr[0]+'</p>' +
+                            '</div>';
+                }
+
                 $('#chat-window').html(messages + msgRow);
             });
+
+
         },
         function() {
             console.warn('WebSocket connection closed');
@@ -58,10 +69,16 @@
             if(e.which == 13) {
                 var message = $('#input-chat').val();
                 message += ':'+username;
-                $('#input-chat').val('')
+                $('#input-chat').val('');
                 conn.publish(channelId, [message]);
             }
         });
+    });
+
+    $( window ).unload(function() {
+        var message = 'has left the room';
+        message += ':'+username;
+        conn.publish(channelId, [message]);
     });
 </script>
 

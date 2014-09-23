@@ -1,5 +1,6 @@
 <?php
 require dirname(__DIR__) . '/vendor/autoload.php';
+require 'start.php';
 
 $loop   = React\EventLoop\Factory::create();
 $handler =  new \Jason\Chat\BasicPubSub();
@@ -34,6 +35,10 @@ $loop->addPeriodicTimer(2, function () use (&$handler, &$showTime){
 
         $videoChannel =& $handler->videoChannel;
         $channel = array_shift($videoChannel);
+
+        //clear trash
+        \Jason\Chat\Models\User::onlyTrashed()->forceDelete();
+
         if($channel)
         {
             $queueNumber = substr($channel, strlen('video_'));
@@ -41,9 +46,6 @@ $loop->addPeriodicTimer(2, function () use (&$handler, &$showTime){
                 throw new \Exception('Error when starting video show. Invalid current queue number');
                 exit;
             }
-
-            //clear trash
-            \Jason\Chat\Models\User::onlyTrashed()->forceDelete();
 
             //make couple for show
             \Jason\Chat\Helper::makeCouple($queueNumber);

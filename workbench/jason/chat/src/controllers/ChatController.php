@@ -8,16 +8,10 @@ class ChatController extends Controller {
 
     const MAX_NUM_SLOTS = 1;
 
-    public function __construct()
-    {
-//        if (Session::has('last_activity') && (time() - Session::get('last_activity') > 20)) {
-//            Session::flush();
-//        }
-//        Session::put('last_activity', time());
-    }
-
 	public function getIndex()
 	{
+        Session::flush();
+
         //check if user is already registered and from other page
         if(Session::has('reminder')){
             return Redirect::to('chat/reminder');
@@ -60,10 +54,13 @@ class ChatController extends Controller {
         //user come this page after video start, remove that user
         if(Session::has('entered')){
             Session::flush();
-            \Jason\Chat\Models\User::destroy($user->user_id);
             return Redirect::to('chat');
         }
+
+        \Jason\Chat\Helper::restoreUserComeBack();
+
         Session::put('reminder', true);
+
 
         $showTime = \Jason\Chat\Helper::getShowTimeByQueue($user->queue_number);
 
@@ -72,6 +69,7 @@ class ChatController extends Controller {
         $view['queue_number'] = $user->queue_number;
 
         $view['server'] = $_SERVER['SERVER_NAME'];
+        $view['userId'] = $user->user_id;
 
         return View::make('chat::reminder', $view);
     }

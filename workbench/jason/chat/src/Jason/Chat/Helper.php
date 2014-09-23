@@ -61,4 +61,21 @@ class Helper {
         }
     }
 
+    public static function restoreUserComeBack()
+    {
+        $user = \Session::get('chat_user');
+        $deletedUser = \Jason\Chat\Models\User::onlyTrashed()->where('user_id', $user->user_id)->first();
+        if(!$deletedUser){
+            return;
+        }
+        $closedAt = $deletedUser->closed_at;
+        $current = time();
+        if($current - $closedAt > 20){
+            \Session::flush();
+        }
+        else{
+            $deletedUser->restore();
+        }
+    }
+
 }

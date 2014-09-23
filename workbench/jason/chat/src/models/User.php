@@ -1,10 +1,9 @@
 <?php
 namespace Jason\Chat\Models;
 
-use Eloquent, Validator;
 use Illuminate\Database\Eloquent\SoftDeletingTrait;
 
-class User extends  Eloquent{
+class User extends \Illuminate\Database\Eloquent\Model{
 
     protected $table = 'chat_users';
 
@@ -25,7 +24,7 @@ class User extends  Eloquent{
 
     public function validate()
     {
-        $v = Validator::make($this->attributes, $this->rules);
+        $v = \Illuminate\Support\Facades\Validator::make($this->attributes, $this->rules);
 
         if ($v->passes())
         {
